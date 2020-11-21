@@ -23,7 +23,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: port install gcc g++ python3-pip libbz2-dev ccache zlib1g-dev uuid-dev
+    - run: brew install gcc g++ python3-pip libbz2-dev ccache zlib1g-dev uuid-dev
     - run: PATH=$PATH:$HOME/bin
     - run: npm i
     - run: npm i -g typescript
