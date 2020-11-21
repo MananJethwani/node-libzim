@@ -13,6 +13,15 @@
     "test": "jest",
     "test-mem-leak": "node -r ts-node/register test/makeLargeZim.ts"
   },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "test/**/*",
+      "node_modules"
+    ]
+  },
   "main": "dist/index.js",
   "author": "Joseph Reeve",
   "license": "GPL-3.0",
@@ -50,7 +59,8 @@
     "tsconfig-paths": "^3.9.0"
   },
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "nyc": "^15.1.0"
   },
   "jest": {
     "preset": "ts-jest/presets/js-with-ts"
