@@ -6,6 +6,7 @@
     "clean": "rm -rf dist build/native/build",
     "tsc": "tsc",
     "prepare": "npm run tsc",
+    "codecov": "nyc --reporter=lcov npm t",
     "install": "npm run download && node-gyp rebuild -v && npm run bundle",
     "download": "node ./download-libzim.js",
     "bundle": "node ./bundle-libzim.js",
