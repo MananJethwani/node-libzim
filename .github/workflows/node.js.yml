@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: brew install libbz2-dev ccache zlib1g-dev uuid-dev
+    - run: brew install ossp-uuid
     - run: PATH=$PATH:$HOME/bin
     - run: npm i
     - run: npm i -g typescript
