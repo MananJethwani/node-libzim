@@ -69,8 +69,11 @@ jobs:
     - run: PATH=$PATH:$HOME/bin
     - run: npm i
     - run: npm i -g typescript
+    - name: installing codecov
+      run: npm i -g codecov
     - run: tsc
     - run: npm run test
+    - run: npm codecov
   
     - name: codecov action
       uses: codecov/codecov-action@v1
